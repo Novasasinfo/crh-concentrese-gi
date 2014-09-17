@@ -9,16 +9,16 @@ App = function()
     this.load = function()
     {
         wade.loadImage('https://crh-concentrese-gi.googlecode.com/git/images/back2.jpg');
-        wade.loadImage('https://crh-concentrese-gi.googlecode.com/git/images/a1.jpg');
-        wade.loadImage('https://crh-concentrese-gi.googlecode.com/git/images/a2.jpg');
-        wade.loadImage('https://crh-concentrese-gi.googlecode.com/git/images/b1.jpg');
-        wade.loadImage('https://crh-concentrese-gi.googlecode.com/git/images/b2.jpg');
-        wade.loadImage('https://crh-concentrese-gi.googlecode.com/git/images/c1.jpg');
-        wade.loadImage('https://crh-concentrese-gi.googlecode.com/git/images/c2.jpg'); 
-        wade.loadImage('https://crh-concentrese-gi.googlecode.com/git/images/d1.jpg');
-        wade.loadImage('https://crh-concentrese-gi.googlecode.com/git/images/d2.jpg');
-        wade.loadImage('https://crh-concentrese-gi.googlecode.com/git/images/e1.jpg');
-        wade.loadImage('https://crh-concentrese-gi.googlecode.com/git/images/e2.jpg');
+        wade.loadImage('https://crh-concentrese-gi.googlecode.com/git/images/a1.png');
+        wade.loadImage('https://crh-concentrese-gi.googlecode.com/git/images/a2.png');
+        wade.loadImage('https://crh-concentrese-gi.googlecode.com/git/images/b1.png');
+        wade.loadImage('https://crh-concentrese-gi.googlecode.com/git/images/b2.png');
+        wade.loadImage('https://crh-concentrese-gi.googlecode.com/git/images/c1.png');
+        wade.loadImage('https://crh-concentrese-gi.googlecode.com/git/images/c2.png'); 
+        wade.loadImage('https://crh-concentrese-gi.googlecode.com/git/images/d1.png');
+        wade.loadImage('https://crh-concentrese-gi.googlecode.com/git/images/d2.png');
+        wade.loadImage('https://crh-concentrese-gi.googlecode.com/git/images/e1.png');
+        wade.loadImage('https://crh-concentrese-gi.googlecode.com/git/images/e2.png');
         wade.loadImage('https://crh-concentrese-gi.googlecode.com/git/images/bg2.jpg');
         wade.loadImage('https://crh-concentrese-gi.googlecode.com/git/images/sparkle.png');
         wade.preloadAudio('https://crh-concentrese-gi.googlecode.com/git/sounds/right.ogg');
@@ -76,7 +76,7 @@ App = function()
 
             // create an animal object for each card
             var index = indices[i + j * gridSize.x];
-            var animalSprite = new Sprite('https://crh-concentrese-gi.googlecode.com/git/images/' + index + '.jpg', 10);
+            var animalSprite = new Sprite('https://crh-concentrese-gi.googlecode.com/git/images/' + index + '.png', 10);
             var animal = new SceneObject(animalSprite, 0, x, y);
             card.animalIndex = index;
 
