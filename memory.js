@@ -8,21 +8,21 @@ App = function()
 
     this.load = function()
     {
-        wade.loadImage('https://concentresecrh.googlecode.com/git/memory/images/back2.jpg');
-        wade.loadImage('https://concentresecrh.googlecode.com/git/memory/images/a1.jpg');
-        wade.loadImage('https://concentresecrh.googlecode.com/git/memory/images/a2.jpg');
-        wade.loadImage('https://concentresecrh.googlecode.com/git/memory/images/b1.jpg');
-        wade.loadImage('https://concentresecrh.googlecode.com/git/memory/images/b2.jpg');
-        wade.loadImage('https://concentresecrh.googlecode.com/git/memory/images/c1.jpg');
-        wade.loadImage('https://concentresecrh.googlecode.com/git/memory/images/c2.jpg'); 
-        wade.loadImage('https://concentresecrh.googlecode.com/git/memory/images/d1.jpg');
-        wade.loadImage('https://concentresecrh.googlecode.com/git/memory/images/d2.jpg');
-        wade.loadImage('https://concentresecrh.googlecode.com/git/memory/images/e1.jpg');
-        wade.loadImage('https://concentresecrh.googlecode.com/git/memory/images/e2.jpg');
-        wade.loadImage('https://concentresecrh.googlecode.com/git/memory/images/bg2.jpg');
-        wade.loadImage('https://concentresecrh.googlecode.com/git/memory/images/sparkle.png');
-        wade.preloadAudio('https://concentresecrh.googlecode.com/git/memory/sounds/right.ogg');
-        wade.preloadAudio('https://concentresecrh.googlecode.com/git/memory/sounds/wrong.ogg');
+        wade.loadImage('https://crh-concentrese-gi.googlecode.com/git/images/back2.jpg');
+        wade.loadImage('https://crh-concentrese-gi.googlecode.com/git/images/a1.jpg');
+        wade.loadImage('https://crh-concentrese-gi.googlecode.com/git/images/a2.jpg');
+        wade.loadImage('https://crh-concentrese-gi.googlecode.com/git/images/b1.jpg');
+        wade.loadImage('https://crh-concentrese-gi.googlecode.com/git/images/b2.jpg');
+        wade.loadImage('https://crh-concentrese-gi.googlecode.com/git/images/c1.jpg');
+        wade.loadImage('https://crh-concentrese-gi.googlecode.com/git/images/c2.jpg'); 
+        wade.loadImage('https://crh-concentrese-gi.googlecode.com/git/images/d1.jpg');
+        wade.loadImage('https://crh-concentrese-gi.googlecode.com/git/images/d2.jpg');
+        wade.loadImage('https://crh-concentrese-gi.googlecode.com/git/images/e1.jpg');
+        wade.loadImage('https://crh-concentrese-gi.googlecode.com/git/images/e2.jpg');
+        wade.loadImage('https://crh-concentrese-gi.googlecode.com/git/images/bg2.jpg');
+        wade.loadImage('https://crh-concentrese-gi.googlecode.com/git/images/sparkle.png');
+        wade.preloadAudio('https://crh-concentrese-gi.googlecode.com/git/sounds/right.ogg');
+        wade.preloadAudio('https://crh-concentrese-gi.googlecode.com/git/sounds/wrong.ogg');
     };
 
     this.init = function()
@@ -70,13 +70,13 @@ App = function()
             // create card object
             var x = (i - gridSize.x/2 + 0.5) * cellSize.x;
             var y = (j - gridSize.y/2 + 0.5) * cellSize.y;
-            var sprite = new Sprite('https://concentresecrh.googlecode.com/git/memory/images/back2.jpg', 5);
+            var sprite = new Sprite('https://crh-concentrese-gi.googlecode.com/git/images/back2.jpg', 5);
             var card = new SceneObject(sprite, 0, x, y);
             wade.addSceneObject(card);
 
             // create an animal object for each card
             var index = indices[i + j * gridSize.x];
-            var animalSprite = new Sprite('https://concentresecrh.googlecode.com/git/memory/images/' + index + '.jpg', 10);
+            var animalSprite = new Sprite('https://crh-concentrese-gi.googlecode.com/git/images/' + index + '.jpg', 10);
             var animal = new SceneObject(animalSprite, 0, x, y);
             card.animalIndex = index;
 
@@ -104,7 +104,7 @@ App = function()
                             wade.app.createParticle(hiddenCards[1].getPosition());
                         }
                         hiddenCards.length = 0;
-                        wade.playAudioIfAvailable('https://concentresecrh.googlecode.com/git/memory/sounds/right.ogg');
+                        wade.playAudioIfAvailable('https://crh-concentrese-gi.googlecode.com/git/sounds/right.ogg');
                         if (++numMatches == 4)
                         {
                             setTimeout(function()
@@ -117,7 +117,7 @@ App = function()
                     else
                     {
                         // no match, so show both cards again
-                        wade.playAudioIfAvailable('https://concentresecrh.googlecode.com/git/memory/sounds/wrong.ogg');
+                        wade.playAudioIfAvailable('https://crh-concentrese-gi.googlecode.com/git/sounds/wrong.ogg');
                         setTimeout(function()
                         {
                             hiddenCards[0].setVisible(true);
@@ -142,7 +142,7 @@ App = function()
     this.createParticle = function(position)
     {
         // create an object that contains a sprite with an animation, then play the animation
-        var animation = new Animation('https://concentresecrh.googlecode.com/git/memory/images/sparkle.png', 8, 4, 30);
+        var animation = new Animation('https://crh-concentrese-gi.googlecode.com/git/memory/images/sparkle.png', 8, 4, 30);
         var size = Math.random() * 40 + 20;
         var sprite = new Sprite();
         sprite.setSize(size, size);
