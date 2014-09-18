@@ -2,7 +2,7 @@ App = function()
 {
     var hiddenCards = [];               // which card objects have been hidden
     var gridSize = {x: 5, y: 2};        // how many cells in the grid
-    var cellSize = {x: 200, y: 250};    // the size of each cell
+    var cellSize = {x: 200, y: 150};    // the size of each cell
     var indices = ["a1","a2","b1","b2","c1","c2","d1","d2","e1","e2"];    // the indices of the cards on the grid (4 pairs)
     var numMatches;                     // the number of matches made since the start of the game
 
@@ -105,7 +105,7 @@ App = function()
                         }
                         hiddenCards.length = 0;
                         wade.playAudioIfAvailable('https://crh-concentrese-gi.googlecode.com/git/sounds/right.ogg');
-                        if (++numMatches == 4)
+                        if (++numMatches == 5)
                         {
                             setTimeout(function()
                             {
@@ -142,7 +142,7 @@ App = function()
     this.createParticle = function(position)
     {
         // create an object that contains a sprite with an animation, then play the animation
-        var animation = new Animation('https://crh-concentrese-gi.googlecode.com/git/memory/images/sparkle.png', 8, 4, 30);
+        var animation = new Animation('https://crh-concentrese-gi.googlecode.com/git/images/sparkle.png', 8, 4, 30);
         var size = Math.random() * 40 + 20;
         var sprite = new Sprite();
         sprite.setSize(size, size);
